@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Dois Irmãos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="logo.png" alt="Dois Irmãos" class="img-fluid" style="width: 150px;">
+                </div>
+                <nav class="nav-primary">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Ofertas</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Produtos</a></li>
+                    </ul>
+                </nav>
+                <div class="search-cart-container d-flex align-items-center">
+                    <div class="search-bar position-relative">
+                        <input type="text" class="form-control" placeholder="Pesquisar produtos...">
+                        <span class="search-icon"><i class="fas fa-search"></i></span>
+                    </div>
+                    <div class="cart-icon position-relative ml-3">
+                        <a href="#" class="text-white" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cartCount" class="cart-count badge badge-pill badge-danger">0</span>
+                        </a>
+                    </div>
+                    <div class="account-services ml-3">
+                        <a href="#" class="text-white">Minha Conta</a>
+                        <a href="#" class="text-white ml-2">Ajuda</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo da Página -->
+    <main class="container my-4">
+        <section class="text-center mb-4">
+            <h1>Bem-vindo ao Supermercado Dois Irmãos</h1>
+        </section>
+
+        <!-- Nova Seção com Imagem e Nome -->
+        <section class="image-vertical-space mb-4">
+            <img src="img/supermercado.jpg" alt="Supermercado" class="img-fluid">
+        </section>
+
+        <!-- Ofertas Especiais -->
+        <section class="offers mb-5">
+            <h2 class="text-center mb-4">Ofertas Especiais</h2>
+            <div id="offersCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="img/espuma_de_barbear.jpg" class="card-img-top" alt="Espuma de Barbear">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Espuma de Barbear</h5>
+                                        <p class="card-text">R$ 15,00</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="img/feijao_carioca.png" class="card-img-top" alt="Feijão Carioca">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Feijão Carioca</h5>
+                                        <p class="card-text">R$ 7,50</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="img/pizza_sadia.png" class="card-img-top" alt="Pizza Sadia">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pizza Sadia</h5>
+                                        <p class="card-text">R$ 22,00</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="img/bolo.jpg" class="card-img-top" alt="Bolo">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bolo</h5>
+                                        <p class="card-text">R$ 25,00</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="img/leite.jpeg" class="card-img-top" alt="Leite">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Leite</h5>
+                                        <p class="card-text">R$ 5,00</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="img/cereal.png" class="card-img-top" alt="Cereal">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cereal</h5>
+                                        <p class="card-text">R$ 12,00</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#offersCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#offersCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+<!-- Categorias -->
+<section class="categories mb-5">
+    <h2 class="text-center mb-4">Categorias</h2>
+    <div id="categoriesCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/Hortifruti.jpeg" class="card-img-top" alt="Hortifruti">
+                            <div class="card-body">
+                                <h5 class="card-title">Hortifruti</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/laticinios.png" class="card-img-top" alt="Laticínios">
+                            <div class="card-body">
+                                <h5 class="card-title">Laticínios</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/carnes.jpg" class="card-img-top" alt="Carnes">
+                            <div class="card-body">
+                                <h5 class="card-title">Carnes</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/padaria.jpeg" class="card-img-top" alt="Padaria">
+                            <div class="card-body">
+                                <h5 class="card-title">Padaria</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/bebidas.png" class="card-img-top" alt="Bebidas">
+                            <div class="card-body">
+                                <h5 class="card-title">Bebidas</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/congelados.jpg" class="card-img-top" alt="Congelados">
+                            <div class="card-body">
+                                <h5 class="card-title">Congelados</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#categoriesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#categoriesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+
+       <!-- Produtos em Destaque -->
+<section class="featured-products mb-5">
+    <h2 class="text-center mb-4">Produtos em Destaque</h2>
+    <div id="featuredProductsCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/sabao.jpg" class="card-img-top" alt="Sabão">
+                            <div class="card-body">
+                                <h5 class="card-title">Sabão</h5>
+                                <p class="card-text">R$ 10,00</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/suco.jpeg" class="card-img-top" alt="Suco">
+                            <div class="card-body">
+                                <h5 class="card-title">Suco</h5>
+                                <p class="card-text">R$ 8,00</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/arroz.png" class="card-img-top" alt="Arroz">
+                            <div class="card-body">
+                                <h5 class="card-title">Arroz</h5>
+                                <p class="card-text">R$ 12,00</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/macarrao.png" class="card-img-top" alt="Macarrão">
+                            <div class="card-body">
+                                <h5 class="card-title">Macarrão</h5>
+                                <p class="card-text">R$ 6,00</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/ovos.jpg" class="card-img-top" alt="Ovos">
+                            <div class="card-body">
+                                <h5 class="card-title">Ovos</h5>
+                                <p class="card-text">R$ 9,00</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/batata.jpeg" class="card-img-top" alt="Batata">
+                            <div class="card-body">
+                                <h5 class="card-title">Batata</h5>
+                                <p class="card-text">R$ 7,00</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#featuredProductsCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#featuredProductsCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+    </main>
+
+       <!-- Footer -->
+       <footer class="bg-dark text-white text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre Nós</h5>
+                    <p>O Supermercado Dois Irmãos oferece produtos frescos e de qualidade para você e sua família. Nossa missão é proporcionar uma experiência de compra excepcional.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <p>Email: contato@doisirmaos.com.br</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Endereço: Rua das Flores, 123, São Paulo - SP</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Siga-nos</h5>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p>&copy; 2024 Supermercado Dois Irmãos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function updateCartCount() {
+            var cartCountElement = document.getElementById('cartCount');
+            var currentCount = parseInt(cartCountElement.textContent);
+            cartCountElement.textContent = currentCount + 1;
+        }
+    
+        // Adiciona um event listener a todos os botões "Adicionar ao Carrinho"
+        document.querySelectorAll('.btn-primary').forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                updateCartCount();
+            });
+        });
+    </script>
+
+    <!-- jQuery, Popper.js, e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

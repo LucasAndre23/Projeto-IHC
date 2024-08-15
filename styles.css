@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    padding-right: 35px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+.search-cart-container {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.account-services a {
+    color: white;
+    margin-left: 10px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 33.33%; /* Exibe 3 cards por vez */
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 1 0 33.33%; /* Faz com que os cards ocupem um terço do carrossel */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-img-top {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    height: 200px; /* Define uma altura fixa para as imagens */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço definido sem distorcer */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    left: -60px; /* Ajuste conforme necessário */
+}
+
+.carousel-control-next {
+    right: -60px; /* Ajuste conforme necessário */
+}
+
+.btn-primary {
+    margin-top: 10px; /* Adiciona um pouco de espaço acima do botão */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .container {
+    max-width: 960px;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Garante que a imagem ocupe mais espaço verticalmente e menos horizontalmente */
+.image-vertical-space {
+    position: relative;
+    width: 100%; /* Define a largura como 100% da largura da tela */
+    height: 50vh; /* Define a altura como 50% da altura da viewport */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+.image-vertical-space img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto; /* Mantém a largura automática */
+    height: 100%; /* Faz a imagem ocupar toda a altura do container */
+    transform: translate(-50%, -50%); /* Centraliza a imagem vertical e horizontalmente */
+    object-fit: cover; /* Faz a imagem cobrir o container mantendo a proporção */
+}
